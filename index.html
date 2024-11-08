@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="./css/stiles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Formulario de Registro</h2>
+            <form>
+                <label for="document">Número de Documento</label>
+                <input type="text" id="document" placeholder="Ingrese su número de documento">
+
+                <label for="first-name">Nombres</label>
+                <input type="text" id="first-name" placeholder="Ingrese sus nombres">
+
+                <label for="last-name">Apellidos</label>
+                <input type="text" id="last-name" placeholder="Ingrese sus apellidos">
+
+                <label for="address">Dirección</label>
+                <input type="text" id="address" placeholder="Ingrese su dirección">
+
+                <div class="coordinates">
+                    <div>
+                        <label for="latitude">Latitud</label>
+                        <input type="text" id="latitude" value="4.633105802898402" readonly>
+                    </div>
+                    <div>
+                        <label for="longitude">Longitud</label>
+                        <input type="text" id="longitude" value="-74.08060327642548" readonly>
+                    </div>
+                </div>
+
+                <button type="button" class="btn" id="save-button">Guardar Usuario</button>
+
+            </form>
+        </div>
+        
+        <div class="map-container" id="map">
+            <!-- Mapa de Google -->
+            <iframe>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQStlK4ZjCxkSTu2GgY4VJh0gLw7maQoA&callback=iniciarMap&libraries=places,geometry&callback=iniciarMap" async defer></script>
+                <script src="./js/main.js"></script>
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
